@@ -9,13 +9,14 @@
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="https://github.com/zorneth/osg-cli"><img src="https://img.shields.io/badge/Go-1.27+-00ADD8?logo=go" alt="Go Version"></a>
   <a href="https://github.com/zorneth/osg-cli/actions/workflows/ci.yml"><img src="https://github.com/zorneth/osg-cli/actions/workflows/ci.yml/badge.svg" alt="osg-cli CI"></a>
+  <a href="https://github.com/zorneth/osg-cli/releases/tag/v0.1.0-alpha.1"><img src="https://img.shields.io/badge/release-v0.1.0--alpha.1-orange" alt="alpha"></a>
 </p>
 
 ---
 
 ## osg
 
-**osg** runs coding agents inside hardened Docker sandboxes. YAML policy controls filesystem and egress; an egress sidecar enforces it; an optional gateway provides registry, provider compose, and relayed exec.
+**osg** (`v0.1.0-alpha.1`) runs coding agents inside hardened Docker sandboxes. YAML policy controls filesystem and egress; an egress sidecar enforces it; an optional gateway provides registry, provider compose, and relayed exec.
 
 ```bash
 go install github.com/zorneth/osg-cli/cmd/osg@latest
