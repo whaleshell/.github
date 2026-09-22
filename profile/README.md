@@ -1,4 +1,4 @@
-<h1 align="center">zorneth</h1>
+<h1 align="center">whaleshell</h1>
 
 <p align="center">
   <strong>Agent sandboxes in Go</strong><br>
@@ -7,48 +7,49 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
-  <a href="https://github.com/zorneth/osg-cli"><img src="https://img.shields.io/badge/Go-1.27+-00ADD8?logo=go" alt="Go Version"></a>
-  <a href="https://github.com/zorneth/osg-cli/actions/workflows/ci.yml"><img src="https://github.com/zorneth/osg-cli/actions/workflows/ci.yml/badge.svg" alt="osg-cli CI"></a>
-  <a href="https://github.com/zorneth/osg-cli/releases/tag/v0.1.0-alpha.1"><img src="https://img.shields.io/badge/release-v0.1.0--alpha.1-orange" alt="alpha"></a>
+  <a href="https://github.com/whaleshell/whaleshell-cli"><img src="https://img.shields.io/badge/Go-1.27+-00ADD8?logo=go" alt="Go Version"></a>
+  <a href="https://github.com/whaleshell/whaleshell-cli/actions/workflows/ci.yml"><img src="https://github.com/whaleshell/whaleshell-cli/actions/workflows/ci.yml/badge.svg" alt="whaleshell-cli CI"></a>
+  <a href="https://github.com/whaleshell/whaleshell-cli/releases"><img src="https://img.shields.io/badge/status-alpha-critical" alt="alpha"></a>
 </p>
 
 ---
 
-## osg
+## whaleshell
 
-**osg** (`v0.1.0-alpha.1`) runs coding agents inside hardened Docker sandboxes. YAML policy controls filesystem and egress; an egress sidecar enforces it; an optional gateway provides registry, provider compose, and relayed exec.
+**whaleshell** runs coding agents inside hardened Docker sandboxes. YAML policy controls filesystem and egress; an egress sidecar enforces it; an optional gateway provides registry, provider compose, and relayed exec.
 
 ```bash
-go install github.com/zorneth/osg-cli/cmd/osg@latest
-osg sandbox create --name demo --workspace . --policy policies/default.yaml
+curl -fsSL https://raw.githubusercontent.com/whaleshell/whaleshell-cli/main/install.sh | bash
+whaleshell sandbox create --name demo --workspace . --policy policies/default.yaml
 ```
 
 ### Repositories
 
 | Repo | Role |
 |------|------|
-| [osg-cli](https://github.com/zorneth/osg-cli) | `osg` CLI, policies, agent images |
-| [osg-core](https://github.com/zorneth/osg-core) | Policy schema + egress engine |
-| [osg-providers](https://github.com/zorneth/osg-providers) | Provider profiles + compose |
-| [osg-proxy](https://github.com/zorneth/osg-proxy) | Egress sidecar + `policy.local` |
-| [osg-driver](https://github.com/zorneth/osg-driver) | Docker compute driver |
-| [osg-runtime](https://github.com/zorneth/osg-runtime) | Sandbox glue, `osg-init`, images |
-| [osg-gateway](https://github.com/zorneth/osg-gateway) | Control-plane HTTP daemon |
-| [osg-display](https://github.com/zorneth/osg-display) | noVNC helpers |
-| [osg-sdk](https://github.com/zorneth/osg-sdk) | Go client |
-| [osg-python](https://github.com/zorneth/osg-python) | Python client |
+| [whaleshell-cli](https://github.com/whaleshell/whaleshell-cli) | `whaleshell` CLI, policies, agent images |
+| [whaleshell-core](https://github.com/whaleshell/whaleshell-core) | Policy schema + egress engine |
+| [whaleshell-providers](https://github.com/whaleshell/whaleshell-providers) | Provider profiles + compose |
+| [whaleshell-proxy](https://github.com/whaleshell/whaleshell-proxy) | Egress sidecar + `policy.local` |
+| [whaleshell-driver](https://github.com/whaleshell/whaleshell-driver) | Docker compute driver |
+| [whaleshell-runtime](https://github.com/whaleshell/whaleshell-runtime) | Sandbox glue, `whaleshell-init`, images |
+| [whaleshell-gateway](https://github.com/whaleshell/whaleshell-gateway) | Control-plane HTTP daemon |
+| [whaleshell-display](https://github.com/whaleshell/whaleshell-display) | noVNC helpers |
+| [whaleshell-sdk](https://github.com/whaleshell/whaleshell-sdk) | Go client |
+| [whaleshell-python](https://github.com/whaleshell/whaleshell-python) | Python client |
+| [slogx](https://github.com/whaleshell/slogx) | Structured slog helpers |
 
 ### Images (GHCR)
 
 ```text
-ghcr.io/zorneth/osg/gateway
-ghcr.io/zorneth/osg/sandboxes/{base,gui,gpu,cursor,claude,codex}
+ghcr.io/whaleshell/whaleshell/gateway
+ghcr.io/whaleshell/whaleshell/sandboxes/{base,gui,gpu,cursor,claude,codex}
 ```
 
 ### Design
 
 - **Multi-repo** — each module is its own git remote (not a monorepo)
-- **Default deny** — L4/L7 egress allowlists in `osg-core`
-- **OpenShell-shaped** — host-gateway alias `host.osg.internal`, provider attach, BYOC
+- **Default deny** — L4/L7 egress allowlists in `whaleshell-core`
+- **OpenShell-shaped** — host-gateway alias `host.whaleshell.internal`, provider attach, BYOC
 
-MIT © zorneth
+MIT © whaleshell
