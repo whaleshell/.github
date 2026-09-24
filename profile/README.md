@@ -20,10 +20,10 @@ Shared **[GitHub Wiki](https://github.com/whaleshell/whaleshell-cli/wiki)** on `
 
 | | |
 |--|--|
-| English | [Home](https://github.com/whaleshell/whaleshell-cli/wiki/En-Home) |
-| Русский | [Главная](https://github.com/whaleshell/whaleshell-cli/wiki/Ru-Home) |
-| Docker | [EN](https://github.com/whaleshell/whaleshell-cli/wiki/En-Providers-Docker-Overview) · [RU](https://github.com/whaleshell/whaleshell-cli/wiki/Ru-Providers-Docker-Overview) |
-| Podman | [EN](https://github.com/whaleshell/whaleshell-cli/wiki/En-Providers-Podman-Overview) · [RU](https://github.com/whaleshell/whaleshell-cli/wiki/Ru-Providers-Podman-Overview) |
+| English | [Home](https://github.com/whaleshell/whaleshell-cli/wiki/en/Home) |
+| Русский | [Главная](https://github.com/whaleshell/whaleshell-cli/wiki/ru/Home) |
+| Docker | [EN](https://github.com/whaleshell/whaleshell-cli/wiki/en/Providers/Docker) · [RU](https://github.com/whaleshell/whaleshell-cli/wiki/ru/Providers/Docker) |
+| Podman | [EN](https://github.com/whaleshell/whaleshell-cli/wiki/en/Providers/Podman) · [RU](https://github.com/whaleshell/whaleshell-cli/wiki/ru/Providers/Podman) |
 
 ```bash
 git clone https://github.com/whaleshell/whaleshell-cli.wiki.git
