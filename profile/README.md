@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/whaleshell/whaleshell-docs"><img src="https://img.shields.io/badge/docs-wiki_EN%2FRU-0A66C2?logo=github" alt="Documentation wiki"></a>
+  <a href="https://github.com/whaleshell/whaleshell-docs/wiki"><img src="https://img.shields.io/badge/docs-GitHub_Wiki_EN%2FRU-0A66C2?logo=github" alt="Documentation wiki"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="https://github.com/whaleshell/whaleshell-cli"><img src="https://img.shields.io/badge/Go-1.27+-00ADD8?logo=go" alt="Go Version"></a>
   <a href="https://github.com/whaleshell/whaleshell-cli/releases"><img src="https://img.shields.io/badge/status-alpha-critical" alt="alpha"></a>
@@ -16,17 +16,17 @@
 
 ## Documentation
 
-Shared wiki (not split across product repos): **[whaleshell-docs](https://github.com/whaleshell/whaleshell-docs)**
+Shared **[GitHub Wiki](https://github.com/whaleshell/whaleshell-docs/wiki)** (one wiki for all modules, EN/RU).
 
 | | |
 |--|--|
-| English | [Home](https://github.com/whaleshell/whaleshell-docs/blob/main/en/Home.md) · [Summary](https://github.com/whaleshell/whaleshell-docs/blob/main/en/SUMMARY.md) |
-| Русский | [Главная](https://github.com/whaleshell/whaleshell-docs/blob/main/ru/Home.md) · [Оглавление](https://github.com/whaleshell/whaleshell-docs/blob/main/ru/SUMMARY.md) |
-| Docker | [EN](https://github.com/whaleshell/whaleshell-docs/tree/main/en/providers/docker) · [RU](https://github.com/whaleshell/whaleshell-docs/tree/main/ru/providers/docker) |
-| Podman | [EN](https://github.com/whaleshell/whaleshell-docs/tree/main/en/providers/podman) · [RU](https://github.com/whaleshell/whaleshell-docs/tree/main/ru/providers/podman) |
+| English | [Home](https://github.com/whaleshell/whaleshell-docs/wiki/En-Home) |
+| Русский | [Главная](https://github.com/whaleshell/whaleshell-docs/wiki/Ru-Home) |
+| Docker | [EN](https://github.com/whaleshell/whaleshell-docs/wiki/En-Providers-Docker-Overview) · [RU](https://github.com/whaleshell/whaleshell-docs/wiki/Ru-Providers-Docker-Overview) |
+| Podman | [EN](https://github.com/whaleshell/whaleshell-docs/wiki/En-Providers-Podman-Overview) · [RU](https://github.com/whaleshell/whaleshell-docs/wiki/Ru-Providers-Podman-Overview) |
 
 ```bash
-git clone https://github.com/whaleshell/whaleshell-docs.git
+git clone https://github.com/whaleshell/whaleshell-docs.wiki.git
 ```
 
 ---
@@ -44,7 +44,7 @@ whaleshell sandbox create --name demo --workspace . --policy policies/default.ya
 
 | Repo | Role |
 |------|------|
-| **[whaleshell-docs](https://github.com/whaleshell/whaleshell-docs)** | Shared documentation wiki (EN/RU) |
+| **[whaleshell-docs](https://github.com/whaleshell/whaleshell-docs)** | Shared docs → [Wiki](https://github.com/whaleshell/whaleshell-docs/wiki) |
 | [whaleshell-cli](https://github.com/whaleshell/whaleshell-cli) | `whaleshell` CLI, policies, agent images |
 | [whaleshell-core](https://github.com/whaleshell/whaleshell-core) | Policy schema + egress engine |
 | [whaleshell-providers](https://github.com/whaleshell/whaleshell-providers) | Provider profiles + compose |
@@ -67,7 +67,7 @@ ghcr.io/whaleshell/whaleshell/sandboxes/{base,gui,gpu,cursor,claude,codex}
 ### Design
 
 - **Multi-repo** — each module is its own git remote (not a monorepo)
-- **Shared docs** — one wiki repo for all modules
+- **Shared wiki** — one GitHub Wiki for all modules
 - **Default deny** — L4/L7 egress allowlists in `whaleshell-core`
 - **OpenShell-shaped** — host-gateway alias `host.whaleshell.internal`, provider attach, BYOC
 
